@@ -20,6 +20,6 @@ func main() {
 		return c.SendString("This is A Rest-API")
 	})
 
-	app.Listen(port.PORTLoad())
+	app.Listen(":" + port.PORTLoad())
 
 }
