@@ -4,6 +4,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/productapi/database"
+	"github.com/productapi/port"
 	"github.com/productapi/route"
 )
 
@@ -19,6 +20,6 @@ func main() {
 		return c.SendString("This is A Rest-API")
 	})
 
-	app.Listen(":3000")
+	app.Listen(port.PORTLoad())
 
 }
